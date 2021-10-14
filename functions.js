@@ -14,23 +14,6 @@ function reverseString(string) {
 }
 module.exports = reverseString;
 
-const calculator = {
-  add(a, b) {
-    return a + b;
-  },
-  subtract(a, b) {
-    return a - b;
-  },
-  divide(a, b) {
-    return a / b;
-  },
-  multiply(a, b) {
-    return a * b;
-  },
-
-};
-module.exports = calculator;
-
 function caesar(string, shift) {
   let str = '';
   for (let i = 0; i < string.length; i++) {
