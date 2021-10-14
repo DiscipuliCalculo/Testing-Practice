@@ -26,7 +26,6 @@ module.exports = calculator;
 function caesar(string, shift) {
     let str = ''
     for (let i = 0; i < string.length; i++) {
-        //console.log(string[i]);
         let letterCase = checkCase(string[i])
         let newLetter = getLetter(string[i], letterCase, shift)
         str = str +newLetter;
@@ -68,4 +67,22 @@ function checkCase(string) {
     }
 }
 
-console.log(caesar('How are you? My name is __', 8))
+function analyze(array) {
+    const length = array.length;
+    let sum = 0
+    for (let i = 0; i < length; i++) {
+        sum += array[i]
+    };
+    const average = sum/length; 
+    const min = Math.min(...array)
+    const max = Math.max(...array)
+    
+    return {
+        
+        average, 
+        min,
+        max,
+        length
+    }
+}
+module.exports = analyze;
